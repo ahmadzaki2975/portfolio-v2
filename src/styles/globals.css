@@ -8,6 +8,17 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.color-image {
+  -webkit-mask-image: url("/inkmask_bottomleft-256.ebebd471.png");
+  -webkit-mask-size: cover;
+  -webkit-mask-position: 100% 0%;
+  transition: all 1s steps(34);
+}
+
+.color-image:hover {
+  -webkit-mask-position: 0% 0%;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
