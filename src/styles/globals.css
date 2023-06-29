@@ -9,14 +9,24 @@
 }
 
 .color-image {
-  -webkit-mask-image: url("/inkmask_bottomleft-256.ebebd471.png");
+  -webkit-mask-image: url("/test-mask1.png");
   -webkit-mask-size: cover;
-  -webkit-mask-position: 100% 0%;
-  transition: all 1s steps(34);
+  -webkit-mask-position: 0% 0%;
+  /* transition: all 1s steps(6); */
+  animation: translate-mask 1s infinite alternate steps(6);
 }
 
 .color-image:hover {
-  -webkit-mask-position: 0% 0%;
+  /* -webkit-mask-position: 100% 0%; */
+}
+
+@keyframes translate-mask {
+  from {
+    -webkit-mask-position: 0% 0%;
+  }
+  to {
+    -webkit-mask-position: 100% 0%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
